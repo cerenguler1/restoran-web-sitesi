@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tatlı Menüsü🍰</title>
+    <link rel="stylesheet" href="tatlılar.css">
+</head>
+<body>
+    <div class="menu-container" id="menu-container">
+        <h1>Tatlı Menüsü</h1>
+        
+        <div class="menu-item" data-price="200">
+            <img src="ımg/tiramusi.jpg" alt="Tiramisu">
+            <div class="menu-info">
+                <h2>Tiramisu</h2>
+                <p>Espressoya batırılmış özel bisküvisi ve özel kreması ile gerçek İtalyan Tiramusu.</p>
+                <span class="price">₺200,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="180">
+            <img src="ımg/cheesecake_orman_meyveli.jpg" alt="Orman Meyveli Chesscake">
+            <div class="menu-info">
+                <h2>Orman Meyveli Chessecake</h2>
+                <p>Özel yapım cheesecake üzerine orman meyveli enfes sos.</p>
+                <span class="price">₺180,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="190">
+            <img src="ımg/mozaikpasta.jpg" alt="Mozaik Pasta">
+            <div class="menu-info">
+                <h2>Mozaik Pasta</h2>
+                <p> Mozaik Pasta, bol kakaolu, bisküvili ve nostaljik tadıyla çay saatlerinizi tatlandırmaya hazır!</p>
+                <span class="price">₺190,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="300">
+            <img src="ımg/-fistikli-baklava.jpg" alt="Fıstıklı Baklava">
+            <div class="menu-info">
+                <h2>Fıstıklı Baklava</h2>
+                <p>İncecik katlar arasında saklanan bol Antep fıstığı ve damakta eriyen şerbetin büyüsüyle, her şeye devam eden bir mutluluk!</p>
+                <span class="price">₺300,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="250">
+            <img src="ımg/şöbiyet.jpg" alt="Şöbiyet">
+            <div class="menu-info">
+                <h2>Şöbiyet</h2>
+                <p>Geleneksel tatlıların zirvesi, kat kat lezzet ve damakta muhteşem bir şölen</p>
+                <span class="price">₺250,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="210">
+            <img src="ımg/kemalpaşa.jpg" alt="Kemalpaşa Tatlısı">
+            <div class="menu-info">
+                <h2>Kemalpaşa Tatlısı</h2>
+                <p>Yumuşacık peynirli hamuru, enfes şerbetle buluştuğu bu benzersiz tatlı, her lokmada damağınızda kalacak bir lezzet şöleni</p>
+                <span class="price">₺210,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="300">
+            <img src="ımg/soğukbaklava.jpg" alt="Soğuk Baklava">
+            <div class="menu-info">
+                <h2>Soğuk Baklava</h2>
+                <p>Sıcacık yaz tedavisi serinletici bir tat, incecik katmanları ve hafif şerbetiyle, Antep fıstığının en ferah özellikleri sizi bekliyor!"</p>
+                <span class="price">₺300,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="200">
+            <img src="ımg/elmalı turta.jpg" alt="Elmalı Turta">
+            <div class="menu-info">
+                <h2>Elmalı Turta</h2>
+                <p> Tarçınlı elma dolgusu, çıtır hamuru ve her ısırıkta yayılan nefis kokusuyla, ev yapımı mutluluk!</p>
+                <span class="price">₺200,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item" data-price="180">
+            <img src="ımg/waffle.jpg" alt="Waffle">
+            <div class="menu-info">
+                <h2>Waffle</h2>
+                <p> Altın renginde çıtır çıtır hamuru, üzerine dökülen çikolata, taze meyveler ve kremasıyla, her lokmada enfes lezzet!.</p>
+                <span class="price">₺180,00</span>
+            </div>
+        </div>
+
+        <button onclick="sortMenuByPrice()">Fiyatlara Göre Sırala</button>
+    </div>
+
+    <script>
+        function sortMenuByPrice() {
+            let menuItems = document.querySelectorAll('.menu-item');
+            
+            // Array'e dönüştür
+            menuItems = Array.from(menuItems);
+
+            // Fiyatları al ve sıralama yap
+            menuItems.sort((a, b) => {
+                let priceA = parseFloat(a.getAttribute('data-price'));
+                let priceB = parseFloat(b.getAttribute('data-price'));
+
+                // Artan fiyat sıralaması
+                return priceA - priceB;
+            });
+
+            // Menü öğelerini sıralanmış olarak yeniden ekle
+            const menuContainer = document.getElementById('menu-container');
+            menuItems.forEach(item => menuContainer.appendChild(item));
+        }
+    </script>
+</body>
+</html>

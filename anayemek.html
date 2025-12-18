@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Yemek Menüsü</title>
+    <link rel="stylesheet" href="anayemek.css">
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Ana Yemek Menüsü</h1>
+        
+        <div class="menu-item">
+            <img src="ımg/dana carpaccio.jpg" alt="Dana Carpaccio">
+            <div class="menu-info">
+                <h2>Dana Carpaccio</h2>
+                <p> İnce dilim dana eti, roka, parmesan, zeytinyağı.</p>
+                <span class="price">₺500,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/dana bonfile.jpg" alt="Dana Bonfile">
+            <div class="menu-info">
+                <h2>Dana Bonfile</h2>
+                <p>Dana bonfile, tereyağı, biber.</p>
+                <span class="price">₺450,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/kuzukaburga.jpg" alt="Kuzu Kaburga">
+            <div class="menu-info">
+                <h2>Kuzu Kaburga</h2>
+                <p>Kuzu kaburga, sarımsak, kekik, biberiye.</p>
+                <span class="price">₺400,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/somonızgara.jpg" alt="Somon Izgara">
+            <div class="menu-info">
+                <h2>Somon Izgara</h2>
+                <p>Tavuk, biber, domates, baharatlar.</p>
+                <span class="price">₺300,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/levrek.jpg" alt="Izgara Levrek">
+            <div class="menu-info">
+                <h2>Izgara Levrek</h2>
+                <p>Kıyılmış biftek, kapari, soğan, yumurta sarısı.</p>
+                <span class="price">₺250,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/karides.jpg" alt="Karides Güveç">
+            <div class="menu-info">
+                <h2>Karides Güveç</h2>
+                <p>Fırında pişirilmiş taze karidesler, sebzeler ve baharatlarla harmanlanarak lezzet dolu bir deneyim sunar.</p>
+                <span class="price">₺250,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/balık buğulama.jpg" alt="Balık Buğulama">
+            <div class="menu-info">
+                <h2>Balık Buğulama</h2>
+                <p>Beyaz etli balık, taze sebzeler ve sebzelerle sunulma yöntemiyle pişirilmiştir..</p>
+                <span class="price">₺270,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/ızgaraköfte.jpg" alt="Izgara Köfte">
+            <div class="menu-info">
+                <h2>Izgara Köfte</h2>
+                <p>Kıyma, baharat, soğan, ekmek iç.</p>
+                <span class="price">₺270,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/kaşarlıköfte.jpg" alt="Kaşarlı Köfte">
+            <div class="menu-info">
+                <h2>Kaşarlı Köfte</h2>
+                <p>Kıyma,baharat,soğan,ekmek,kaşar.</p>
+                <span class="price">₺250,00</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="ımg/güveçköfte.jpg" alt="Güveç Köfte">
+            <div class="menu-info">
+                <h2>Güveç Köfte</h2>
+                <p>İnce bulgur,kıyma ve baharatlarla hazırlanmış köfteler güveçte pişirilip servis edilir.</p>
+                <span class="price">₺200,00</span>
+            </div>
+        </div>
+    </div>
+    
+   <script>
+  window.addEventListener("scroll", function () {
+    const body = document.body;
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+    const scrollPercent = scrollTop / docHeight;
+
+    // Açık pembe (255, 200, 220) → Koyu pembe (180, 0, 90)
+    const red = Math.floor(215 - scrollPercent * 75);     
+    const green = Math.floor(218 - scrollPercent * 200);  
+    const blue = Math.floor(218 - scrollPercent * 130);   
+
+    body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+  });
+</script>
+
+</body>
+</html>
+

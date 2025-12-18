@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İçecek Menüsü ☕</title>
+    <link rel="stylesheet" href="icecek.css">
+</head>
+
+<body>
+    <div class="menu-container">
+        <h1>İçecek Menüsü</h1>
+
+        <div class="ıcecek">
+            <img src="ımg/latte.jpg.jpg" alt="latte">
+            <h2>Latte</h2>
+            <p class="price">₺100.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Latte')">❤</button>
+        </div>
+
+        <div class="ıcecek">
+            <img src="ımg/Capuccino.jpg.jpg" alt="Capuccino">
+            <h2>Capuccino</h2>
+            <p class="price">₺90.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Capuccino')">❤</button>
+        </div>
+
+        <div class="ıcecek">
+            <img src="ımg/Americano.jpg.jpg" alt="Americano">
+            <h2>Americano</h2>
+            <p class="price">₺80.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Americano')">❤</button>
+        </div>
+
+        <div class="ıcecek">
+            <img src="ımg/türk kahvesi.jpg.jpg" alt="Türk Kahvesi">
+            <h2>Türk Kahve</h2>
+            <p class="price">₺60.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Türk Kahvesi')">❤</button>
+        </div>
+
+
+        <div class="ıcecek">
+            <img src="ımg/sicak-cikolata.jpg.jpg" alt="Sıcak çikolata">
+            <h2>Sıcak Çikolata</h2>
+            <p class="price">₺50.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Sıcak çikolata')">❤</button>
+        </div>
+
+
+        <div class="ıcecek">
+            <img src="ımg/çay.jpg.jpg" alt="Çay">
+            <h2>Çay</h2>
+            <p class="price">₺30.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Çay')">❤</button>
+        </div>
+
+        <div class="ıcecek">
+            <img src="ımg/cola.jpg" alt="Kola">
+            <h2>Kola</h2>
+            <p class="price">₺50.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Kola')">❤</button>
+        </div>
+
+        <div class="ıcecek">
+            <img src="ımg/limonata.jpg.jpg" alt="Limonata">
+            <h2>Limonata</h2>
+            <p class="price">₺40.00</p>
+            <button class="favorite-button" onclick="addToFavorites('Limonata')">❤</button>
+        </div>
+    </div>
+    <div class="favorites-container">
+        <h2>Favori İçecekler</h2>
+        <ul id="favorites-list" class="favorite-list">
+            <!-- Favori içecekler buraya eklenecek -->
+        </ul>
+    </div>
+    <script>
+        // Favori içecekleri tutacak dizi
+        let favorites = [];
+
+        // Favorilere ekleme fonksiyonu
+        function addToFavorites(drink) {
+            // Eğer içecek zaten favorilere eklenmemişse, ekle
+            if (!favorites.includes(drink)) {
+                favorites.push(drink);
+                updateFavorites(); // Favori listelerini güncelle
+            }
+        }
+
+        // Favoriler listesini güncelleme fonksiyonu
+        function updateFavorites() {
+            const favoritesList = document.getElementById("favorites-list");
+            favoritesList.innerHTML = ""; // Favoriler listesini temizle
+
+            // Favori içecekleri listede göster
+            favorites.forEach(favorite => {
+                const li = document.createElement("li");
+                li.textContent = favorite;
+                favoritesList.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

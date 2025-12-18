@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #bea4983b;
+    color: #333;
+    padding: 20px;
+}
+
+.menu-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: grid; /* Grid yapısını kullanıyorum */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Otomatik sütunlar her sütunu en az 300px olarak ayarlıyorum */
+    gap: 30px; /* kutular arasındaki boşluk */
+}
+
+h1 {
+    font-size: 40px;
+    color: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 40px;
+    grid-column: span 3; /* Başlık tüm sütunları kapsar */
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.menu-info {
+    flex: 1;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.menu-info h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.menu-info p {
+    font-size: 18px;
+    color: #331212;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 19px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+.menu-item:hover { 
+    background-color: #2b475e46;
+    transform: scale(1.02);
+}
+
+
+.rating {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .star {
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+  }
+  
+  .star.selected {
+    color: gold;
+  }
+  
