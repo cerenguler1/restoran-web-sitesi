@@ -1,4 +1,5 @@
 # 🍽️ Elite Restaurant - Web Projesi
+ ## 🌐 [Canlı Siteyi Görüntüle] https://cerenguler1.github.io/restoran-web-sitesi/
 
 **Elite**, modern restoran ihtiyaçlarına yönelik olarak HTML5, CSS3 ve JavaScript teknolojileriyle geliştirilmiş, kullanıcı deneyimi (UX) odaklı bir web platformudur.
 
